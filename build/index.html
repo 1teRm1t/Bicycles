@@ -51,13 +51,66 @@
 
   <main>
     <section class="advantages">
-      <h1 class="advantages__title">Несколько фактов о нас</h1>
+      <h2 class="advantages__title">Несколько фактов о нас</h2>
       <ul class="advantages__list">
         <li class="advantages__item">Самый широкий выбор велосипедов!</li>
         <li class="advantages__item">Доставка велосипедов по всей России!</li>
         <li class="advantages__item">Большой выбор крутых аксессуаров!</li>
         <li class="advantages__item">Профессиональные консультации!</li>
       </ul>
+    </section>
+
+    <section class="models">
+      <h2 class="models__title">Виды велосипедов</h2>
+      <ul class="models__list">
+        <li class="models__item">
+          <a class="models__link models__link--road" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/road-bicycle-desktop@1x.webp 1x, img/road-bicycle-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/road-bicycle-mobile@1x.webp 1x, img/road-bicycle-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1024px)" srcset="img/road-bicycle-desktop@1x.jpg, img/road-bicycle-desktop@2x.jpg">
+              <img class="models__img" src="img/road-bicycle-mobile@1x.jpg" srcset="img/road-bicycle-mobile@2x.jpg" alt="">
+            </picture>
+          </a>
+          <h4 class="models__item-title">Дорожный велосипед</h4>
+        </li>
+        <li class="models__item">
+          <a class="models__link models__link--mountain" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/mountain-bike-desktop@1x.webp 1x, img/mountain-bike-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/mountain-bike-mobile@1x.webp 1x, img/mountain-bike-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1024px)" srcset="img/mountain-bike-desktop@1x.jpg, img/mountain-bike-desktop@2x.jpg">
+              <img class="models__img" src="img/mountain-bike-mobile@1x.jpg" srcset="img/mountain-bike-mobile@2x.jpg" alt="">
+            </picture>
+          </a>
+          <h4 class="models__item-title">Горный велосипед</h4>
+        </li>
+        <li class="models__item">
+          <a class="models__link models__link--child" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="img/child-bicycle-desktop@1x.webp 1x, img/child-bicycle-desktop@2x.webp 2x">
+              <source type="image/webp" srcset="img/child-bicycle-mobile@1x.webp 1x, img/child-bicycle-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1024px)" srcset="img/child-bicycle-desktop@1x.jpg, img/child-bicycle-desktop@2x.jpg">
+              <img class="models__img" src="img/child-bicycle-mobile@1x.jpg" srcset="img/child-bicycle-mobile@2x.jpg" alt="">
+            </picture>
+          </a>
+          <h4 class="models__item-title">Детский велосипед</h4>
+        </li>
+      </ul>
+    </section>
+
+    <section class="video">
+      <div class="video__desc">
+        <h2 class="video__title">Видео про велосипеды</h2>
+        <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+      </div>
+      <div class="video__wrap">
+        <video class="video__content"></video>
+        <button class="video__btn" type="button" aria-label="Воспроизвести"></button>
+      </div>
     </section>
   </main>
 

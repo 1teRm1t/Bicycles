@@ -32,6 +32,11 @@
 
     opacity: 0.5;
   }
+
+  &:hover,
+  &:focus {
+    outline: 2px solid green;
+  }
 }
 
 .form__btn {

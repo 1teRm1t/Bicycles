@@ -32,6 +32,7 @@
 .advantages__item {
   position: relative;
 
+  width: 25%;
   max-width: 263px;
   margin-bottom: 60px;
   padding: 53px 0 24px;
@@ -47,7 +48,7 @@
   content: "0"counter(section);
 
   top: 0;
-  left: 116px;
+  left: 44%;
 
   font-family: "Open Sans", "Arial", sans-serif;
   font-weight: 700;
@@ -72,6 +73,7 @@
   }
 
   .advantages__item {
+    width: 50%;
     margin-right: 0;
     margin-bottom: 18px;
   }
@@ -83,7 +85,7 @@
   }
 
   .advantages__item {
-    max-width: 290px;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 42px;
     padding: 53px 0 9px;
@@ -98,6 +100,5 @@
 
   .advantages__item::before {
     top: 5px;
-    left: 131px;
   }
 }

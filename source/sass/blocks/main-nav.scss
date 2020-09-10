@@ -47,6 +47,11 @@
   color: $white;
 
   opacity: 0.7;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 }
 
 @media (max-width: $tablet-width) {

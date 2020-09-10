@@ -66,6 +66,7 @@
   background-image: url("../img/backdrop-video-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-size: 929px 522px;
+  background-color: $black-main;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/backdrop-video-desktop@2x.jpg");
@@ -87,6 +88,10 @@
 
   border: none;
   cursor: pointer;
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
 }
 
 @media (max-width: $tablet-width) {

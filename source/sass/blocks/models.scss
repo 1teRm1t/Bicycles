@@ -44,10 +44,13 @@
     margin-top: 10px;
   }
 
-  &:nth-child(2),
   &:nth-child(3n+2) {
     margin-top: 39px;
   }
+}
+
+.models__item--indent {
+  margin-top: 39px;
 }
 
 .models__link {
@@ -139,7 +142,7 @@
   }
 
   .models__item {
-    width: 45.5%;
+    width: auto;
     margin: 0 auto;
     margin-bottom: 52px;
 
@@ -156,10 +159,13 @@
       margin-top: 0;
     }
 
-    &:nth-child(2),
     &:nth-child(3n+2) {
       margin-top: 0;
     }
+  }
+
+  .models__item--indent {
+    margin-top: 0;
   }
 
   .models__link--road::before {
@@ -195,7 +201,6 @@
   }
 
   .models__item {
-    width: 100%;
     margin-bottom: 42px;
 
     &:nth-child(odd) {

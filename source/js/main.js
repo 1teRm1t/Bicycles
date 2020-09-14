@@ -1,61 +1,65 @@
 'use strict';
 
-var nav = document.querySelector('.main-nav__list');
-var btnToggle = document.querySelector('.main-nav__toggle');
-var links = document.querySelectorAll('a[href^="#"]');
-var inputName = document.querySelector('input[name="name"]');
-var inputPhone = document.querySelector('input[name="phone"]');
+var main = document.querySelector('#main');
+
+if (main) {
+  var nav = document.querySelector('.main-nav__list');
+  var btnToggle = document.querySelector('.main-nav__toggle');
+  var links = document.querySelectorAll('a[href^="#"]');
+  var inputName = document.querySelector('input[name="name"]');
+  var inputPhone = document.querySelector('input[name="phone"]');
 
 
-btnToggle.addEventListener('click', function () {
-  btnToggle.classList.toggle('main-nav__toggle--active');
-  nav.classList.toggle('main-nav__list--active');
-});
-
-
-for (let link of links) {
-  link.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    var id = link.getAttribute('href');
-
-    document.querySelector(id).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    });
+  btnToggle.addEventListener('click', function () {
+    btnToggle.classList.toggle('main-nav__toggle--active');
+    nav.classList.toggle('main-nav__list--active');
   });
-};
 
 
-var getCorrectName = function () {
-  var valueName = inputName.value;
-  var re = /^[a-zA-Zа-яА-Я]*$/;
+  for (let link of links) {
+    link.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      var id = link.getAttribute('href');
 
-  for (var i = 0; i < valueName.length; i++) {
-    if (!re.test(valueName[i])) {
-      inputName.setCustomValidity('Имя должно содержать только буквы');
-    } else {
-      inputName.setCustomValidity('');
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  };
+
+
+  var getCorrectName = function () {
+    var valueName = inputName.value;
+    var re = /^[a-zA-Zа-яА-Я]*$/;
+
+    for (var i = 0; i < valueName.length; i++) {
+      if (!re.test(valueName[i])) {
+        inputName.setCustomValidity('Имя должно содержать только буквы');
+      } else {
+        inputName.setCustomValidity('');
+      }
+    }
+  };
+
+  inputName.addEventListener('input', function () {
+    getCorrectName();
+  });
+
+  var getCorrectPhone = function () {
+    var valuePhone = inputPhone.value;
+    var re = /^[0-9]*$/;
+
+    for (var i = 0; i < valuePhone.length; i++) {
+      if (!re.test(valuePhone[i])) {
+        inputPhone.setCustomValidity('Номер телефона должен состоять из цифр');
+      } else {
+        inputPhone.setCustomValidity('');
+      }
     }
   }
-};
 
-inputName.addEventListener('input', function () {
-  getCorrectName();
-});
-
-var getCorrectPhone = function () {
-  var valuePhone = inputPhone.value;
-  var re = /^[0-9]*$/;
-
-  for (var i = 0; i < valuePhone.length; i++) {
-    if (!re.test(valuePhone[i])) {
-      inputPhone.setCustomValidity('Номер телефона должен состоять из цифр');
-    } else {
-      inputPhone.setCustomValidity('');
-    }
-  }
+  inputPhone.addEventListener('input', function () {
+    getCorrectPhone();
+  });
 }
-
-inputPhone.addEventListener('input', function () {
-  getCorrectPhone();
-});

@@ -16,8 +16,11 @@
 }
 
 .form__field {
-  width: 100%;
   margin-bottom: 20px;
+}
+
+.form__field input {
+  width: 100%;
   padding: 14px 20px 12px 29px;
 
   background: $white;
@@ -70,7 +73,7 @@
     color: $black-main;
   }
 
-  .form__field {
+  .form__field input {
     padding: 13px 20px 13px 21px;
   }
 
@@ -90,7 +93,7 @@
     margin-bottom: 20px;
   }
 
-  .form__field {
+  .form__field input {
     padding: 13px 21px 13px 25px;
   }
 

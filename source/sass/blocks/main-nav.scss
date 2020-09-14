@@ -113,7 +113,7 @@
     flex-direction: column;
     left: 0;
     width: 100%;
-    padding: 100px 0 135px;
+    padding: 101px 0 137px;
 
     background-color: $white;
 
@@ -141,11 +141,26 @@
   }
 
   .main-nav__link {
+    position: relative;
     padding: 16px 17px;
 
     font-size: 20px;
     line-height: 28px;
 
     color: $grey;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      top: 22px;
+      right: 20px;
+
+      width: 12px;
+      height: 12px;
+
+      background-image: url("../img/icon-arrow.svg");
+      background-repeat: no-repeat;
+    }
   }
 }

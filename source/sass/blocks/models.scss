@@ -125,7 +125,7 @@
 
 @media (max-width: $tablet-width) {
   .models {
-    padding: 49px 89px 20px;
+    padding: 49px 89px 16px;
   }
 
   .models__title {
@@ -138,6 +138,8 @@
 
   .models__list {
     flex-wrap: wrap;
+    flex-direction: row;
+
     padding: 0;
   }
 
@@ -198,6 +200,10 @@
 @media (max-width: $mobile-width) {
   .models {
     padding: 50px 25px 12px;
+  }
+
+  .models__list {
+    flex-direction: column;
   }
 
   .models__item {

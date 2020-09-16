@@ -8,7 +8,11 @@ if (main) {
   var links = document.querySelectorAll('a[href^="#"]');
   var inputName = document.querySelector('input[name="name"]');
   var inputPhone = document.querySelector('input[name="phone"]');
+  var pageHeader = document.querySelector('.page-header__wrap');
 
+  btnToggle.classList.remove('main-nav__toggle--no-js');
+  nav.classList.remove('main-nav__list--no-js');
+  pageHeader.classList.remove('page-header__wrap--no-js');
 
   btnToggle.addEventListener('click', function () {
     btnToggle.classList.toggle('main-nav__toggle--active');
